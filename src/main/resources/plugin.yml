@@ -1,0 +1,19 @@
+name: HandelsAuftrag
+version: '1.0.0'
+main: de.playground.handelsauftrag.HandelsAuftragPlugin
+api-version: '1.21'
+author: PlayGround
+description: Kauf-Auftrag-System - Spieler legen Geld für benötigte Items zurück, andere Spieler liefern und bekommen automatisch ausgezahlt, auch wenn der Auftraggeber offline ist.
+depend: [Vault]
+
+commands:
+  ha:
+    description: Öffnet das Handelsauftrag-Board.
+    usage: '&cNutzung: &7/ha'
+    permission: playground.handelsauftrag.use
+    aliases: [handelsauftrag, auftrag]
+
+permissions:
+  playground.handelsauftrag.use:
+    description: Erlaubt die Nutzung von /ha (Aufträge erstellen, liefern, verwalten).
+    default: true

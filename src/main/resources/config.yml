@@ -1,0 +1,40 @@
+# ============================================================
+#  HandelsAuftrag - Konfiguration
+# ============================================================
+
+# Wie viele gleichzeitig offene Aufträge ein Spieler maximal haben darf.
+max-active-requests-per-player: 5
+
+# Mindestpreis pro Stück (verhindert Aufträge mit Preis 0 oder Bruchteilen von Cent).
+min-price-per-unit: 0.01
+
+# Mindest- und Höchstmenge pro Auftrag.
+min-amount: 1
+max-amount: 100000
+
+# Titel der GUIs (Farbcodes mit & möglich).
+board-title: '&8Handelsauftrag-Board'
+create-title: '&8Auftrag erstellen - Item wählen'
+my-requests-title: '&8Meine Aufträge'
+deliver-title: '&8Lieferung bestätigen'
+collection-title: '&8Abholung'
+
+# Prefix vor allen Chat-Nachrichten des Plugins (Ankündigungen, Fehler,
+# Bestätigungen usw.), nicht vor GUI-Titeln/Item-Texten.
+prefix: '&aPlay&bGround &7» &r'
+
+# Wie viele Sekunden ein neuer Auftrag nach dem Erstellen noch "pending" ist,
+# bevor er auf dem Board erscheint und im Chat angekündigt wird. In dieser
+# Zeit kann der Ersteller ihn über "Meine Aufträge" noch stornieren, falls er
+# sich vertippt hat (voller Rückerstattung).
+pending-seconds: 30
+
+# Wie viele Stunden ein Auftrag maximal offen bleibt, bevor er automatisch
+# storniert wird (Restgeld wird dabei vollständig erstattet, auch wenn der
+# Ersteller offline ist). Verhindert, dass das Board sich mit vergessenen
+# Aufträgen von längst inaktiven Spielern zumüllt.
+request-lifetime-hours: 48
+
+# Wie oft (in Minuten) im Hintergrund geprüft wird, ob Aufträge abgelaufen
+# sind. Kleinere Werte = genauere Ablaufzeit, aber etwas mehr Serverlast.
+expiry-check-interval-minutes: 5
